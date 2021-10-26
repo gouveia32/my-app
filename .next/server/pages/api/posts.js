@@ -1,12 +1,4 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
 exports.id = "pages/api/posts";
@@ -19,7 +11,16 @@ exports.modules = {
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @prisma/client */ \"@prisma/client\");\n/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_prisma_client__WEBPACK_IMPORTED_MODULE_0__);\n\nconst prisma = global.prisma || new _prisma_client__WEBPACK_IMPORTED_MODULE_0__.PrismaClient();\nif (true) global.prisma = prisma;\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prisma);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9saWIvcHJpc21hLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUFBO0FBRUEsTUFBTUMsTUFBTSxHQUFHQyxNQUFNLENBQUNELE1BQVAsSUFBaUIsSUFBSUQsd0RBQUosRUFBaEM7QUFFQSxJQUFJLE1BQXdDRSxNQUFNLENBQUNELE1BQVAsR0FBZ0JBLE1BQWhCO0FBRTVDLGlFQUFlQSxNQUFmIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGxhbmV0c2NhbGUtcHJpc21hLW5leHQvLi9saWIvcHJpc21hLmpzP2M1NjUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUHJpc21hQ2xpZW50IH0gZnJvbSAnQHByaXNtYS9jbGllbnQnXG5cbmNvbnN0IHByaXNtYSA9IGdsb2JhbC5wcmlzbWEgfHwgbmV3IFByaXNtYUNsaWVudCgpO1xuXG5pZiAocHJvY2Vzcy5lbnYuTk9ERV9FTlYgPT09IFwiZGV2ZWxvcG1lbnRcIikgZ2xvYmFsLnByaXNtYSA9IHByaXNtYTtcblxuZXhwb3J0IGRlZmF1bHQgcHJpc21hIl0sIm5hbWVzIjpbIlByaXNtYUNsaWVudCIsInByaXNtYSIsImdsb2JhbCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./lib/prisma.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @prisma/client */ "@prisma/client");
+/* harmony import */ var _prisma_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_prisma_client__WEBPACK_IMPORTED_MODULE_0__);
+
+const prisma = global.prisma || new _prisma_client__WEBPACK_IMPORTED_MODULE_0__.PrismaClient();
+if (true) global.prisma = prisma;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prisma);
 
 /***/ }),
 
@@ -29,7 +30,37 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ assetHandler)\n/* harmony export */ });\n/* harmony import */ var _lib_prisma__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../lib/prisma */ \"./lib/prisma.js\");\n\nasync function assetHandler(req, res) {\n  const {\n    method\n  } = req;\n\n  switch (method) {\n    case \"GET\":\n      try {\n        const posts = await _lib_prisma__WEBPACK_IMPORTED_MODULE_0__.default.post.findMany();\n        res.status(200).json(posts);\n      } catch (e) {\n        console.error(\"Request error\", e);\n        res.status(500).json({\n          error: \"Error fetching posts\"\n        });\n      }\n\n      break;\n\n    default:\n      res.setHeader(\"Allow\", [\"GET\"]);\n      res.status(405).end(`Method ${method} Not Allowed`);\n      break;\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9hcGkvcG9zdHMuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQTtBQUVlLGVBQWVDLFlBQWYsQ0FBNEJDLEdBQTVCLEVBQWlDQyxHQUFqQyxFQUFzQztBQUNqRCxRQUFNO0FBQUVDLElBQUFBO0FBQUYsTUFBYUYsR0FBbkI7O0FBRUEsVUFBUUUsTUFBUjtBQUNJLFNBQUssS0FBTDtBQUNJLFVBQUk7QUFDQSxjQUFNQyxLQUFLLEdBQUcsTUFBTUwsOERBQUEsRUFBcEI7QUFDQUcsUUFBQUEsR0FBRyxDQUFDSyxNQUFKLENBQVcsR0FBWCxFQUFnQkMsSUFBaEIsQ0FBcUJKLEtBQXJCO0FBQ0gsT0FIRCxDQUdFLE9BQU1LLENBQU4sRUFBUztBQUNQQyxRQUFBQSxPQUFPLENBQUNDLEtBQVIsQ0FBYyxlQUFkLEVBQStCRixDQUEvQjtBQUNBUCxRQUFBQSxHQUFHLENBQUNLLE1BQUosQ0FBVyxHQUFYLEVBQWdCQyxJQUFoQixDQUFxQjtBQUFFRyxVQUFBQSxLQUFLLEVBQUU7QUFBVCxTQUFyQjtBQUNIOztBQUNEOztBQUNKO0FBQ0lULE1BQUFBLEdBQUcsQ0FBQ1UsU0FBSixDQUFjLE9BQWQsRUFBdUIsQ0FBQyxLQUFELENBQXZCO0FBQ0FWLE1BQUFBLEdBQUcsQ0FBQ0ssTUFBSixDQUFXLEdBQVgsRUFBZ0JNLEdBQWhCLENBQXFCLFVBQVNWLE1BQU8sY0FBckM7QUFDQTtBQWJSO0FBZUgiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wbGFuZXRzY2FsZS1wcmlzbWEtbmV4dC8uL3BhZ2VzL2FwaS9wb3N0cy5qcz83ZjAwIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBwcmlzbWEgZnJvbSBcIi4uLy4uL2xpYi9wcmlzbWFcIjtcblxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gYXNzZXRIYW5kbGVyKHJlcSwgcmVzKSB7XG4gICAgY29uc3QgeyBtZXRob2QgfSA9IHJlcTtcblxuICAgIHN3aXRjaCAobWV0aG9kKSB7XG4gICAgICAgIGNhc2UgXCJHRVRcIjpcbiAgICAgICAgICAgIHRyeSB7ICAgXG4gICAgICAgICAgICAgICAgY29uc3QgcG9zdHMgPSBhd2FpdCBwcmlzbWEucG9zdC5maW5kTWFueSgpO1xuICAgICAgICAgICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHBvc3RzKTtcbiAgICAgICAgICAgIH0gY2F0Y2goZSkge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUuZXJyb3IoXCJSZXF1ZXN0IGVycm9yXCIsIGUpO1xuICAgICAgICAgICAgICAgIHJlcy5zdGF0dXMoNTAwKS5qc29uKHsgZXJyb3I6IFwiRXJyb3IgZmV0Y2hpbmcgcG9zdHNcIiB9KTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICBkZWZhdWx0OlxuICAgICAgICAgICAgcmVzLnNldEhlYWRlcihcIkFsbG93XCIsIFtcIkdFVFwiXSk7XG4gICAgICAgICAgICByZXMuc3RhdHVzKDQwNSkuZW5kKGBNZXRob2QgJHttZXRob2R9IE5vdCBBbGxvd2VkYCk7XG4gICAgICAgICAgICBicmVhaztcbiAgICB9XG59Il0sIm5hbWVzIjpbInByaXNtYSIsImFzc2V0SGFuZGxlciIsInJlcSIsInJlcyIsIm1ldGhvZCIsInBvc3RzIiwicG9zdCIsImZpbmRNYW55Iiwic3RhdHVzIiwianNvbiIsImUiLCJjb25zb2xlIiwiZXJyb3IiLCJzZXRIZWFkZXIiLCJlbmQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/api/posts.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ assetHandler)
+/* harmony export */ });
+/* harmony import */ var _lib_prisma__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../lib/prisma */ "./lib/prisma.js");
+
+async function assetHandler(req, res) {
+  const {
+    method
+  } = req;
+
+  switch (method) {
+    case "GET":
+      try {
+        const posts = await _lib_prisma__WEBPACK_IMPORTED_MODULE_0__.default.post.findMany();
+        res.status(200).json(posts);
+      } catch (e) {
+        console.error("Request error", e);
+        res.status(500).json({
+          error: "Error fetching posts"
+        });
+      }
+
+      break;
+
+    default:
+      res.setHeader("Allow", ["GET"]);
+      res.status(405).end(`Method ${method} Not Allowed`);
+      break;
+  }
+}
 
 /***/ }),
 
@@ -54,3 +85,4 @@ var __webpack_exports__ = (__webpack_exec__("./pages/api/posts.js"));
 module.exports = __webpack_exports__;
 
 })();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGFnZXMvYXBpL3Bvc3RzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUVBLE1BQU1DLE1BQU0sR0FBR0MsTUFBTSxDQUFDRCxNQUFQLElBQWlCLElBQUlELHdEQUFKLEVBQWhDO0FBRUEsSUFBSSxNQUF3Q0UsTUFBTSxDQUFDRCxNQUFQLEdBQWdCQSxNQUFoQjtBQUU1QyxpRUFBZUEsTUFBZjs7Ozs7Ozs7Ozs7Ozs7O0FDTkE7QUFFZSxlQUFlRSxZQUFmLENBQTRCQyxHQUE1QixFQUFpQ0MsR0FBakMsRUFBc0M7QUFDakQsUUFBTTtBQUFFQyxJQUFBQTtBQUFGLE1BQWFGLEdBQW5COztBQUVBLFVBQVFFLE1BQVI7QUFDSSxTQUFLLEtBQUw7QUFDSSxVQUFJO0FBQ0EsY0FBTUMsS0FBSyxHQUFHLE1BQU1OLDhEQUFBLEVBQXBCO0FBQ0FJLFFBQUFBLEdBQUcsQ0FBQ0ssTUFBSixDQUFXLEdBQVgsRUFBZ0JDLElBQWhCLENBQXFCSixLQUFyQjtBQUNILE9BSEQsQ0FHRSxPQUFNSyxDQUFOLEVBQVM7QUFDUEMsUUFBQUEsT0FBTyxDQUFDQyxLQUFSLENBQWMsZUFBZCxFQUErQkYsQ0FBL0I7QUFDQVAsUUFBQUEsR0FBRyxDQUFDSyxNQUFKLENBQVcsR0FBWCxFQUFnQkMsSUFBaEIsQ0FBcUI7QUFBRUcsVUFBQUEsS0FBSyxFQUFFO0FBQVQsU0FBckI7QUFDSDs7QUFDRDs7QUFDSjtBQUNJVCxNQUFBQSxHQUFHLENBQUNVLFNBQUosQ0FBYyxPQUFkLEVBQXVCLENBQUMsS0FBRCxDQUF2QjtBQUNBVixNQUFBQSxHQUFHLENBQUNLLE1BQUosQ0FBVyxHQUFYLEVBQWdCTSxHQUFoQixDQUFxQixVQUFTVixNQUFPLGNBQXJDO0FBQ0E7QUFiUjtBQWVIOzs7Ozs7Ozs7O0FDcEJEIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGxhbmV0c2NhbGUtcHJpc21hLW5leHQvLi9saWIvcHJpc21hLmpzIiwid2VicGFjazovL3BsYW5ldHNjYWxlLXByaXNtYS1uZXh0Ly4vcGFnZXMvYXBpL3Bvc3RzLmpzIiwid2VicGFjazovL3BsYW5ldHNjYWxlLXByaXNtYS1uZXh0L2V4dGVybmFsIFwiQHByaXNtYS9jbGllbnRcIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBQcmlzbWFDbGllbnQgfSBmcm9tICdAcHJpc21hL2NsaWVudCdcclxuXHJcbmNvbnN0IHByaXNtYSA9IGdsb2JhbC5wcmlzbWEgfHwgbmV3IFByaXNtYUNsaWVudCgpO1xyXG5cclxuaWYgKHByb2Nlc3MuZW52Lk5PREVfRU5WID09PSBcImRldmVsb3BtZW50XCIpIGdsb2JhbC5wcmlzbWEgPSBwcmlzbWE7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBwcmlzbWEiLCJpbXBvcnQgcHJpc21hIGZyb20gXCIuLi8uLi9saWIvcHJpc21hXCI7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBhc3NldEhhbmRsZXIocmVxLCByZXMpIHtcclxuICAgIGNvbnN0IHsgbWV0aG9kIH0gPSByZXE7XHJcblxyXG4gICAgc3dpdGNoIChtZXRob2QpIHtcclxuICAgICAgICBjYXNlIFwiR0VUXCI6XHJcbiAgICAgICAgICAgIHRyeSB7ICAgXHJcbiAgICAgICAgICAgICAgICBjb25zdCBwb3N0cyA9IGF3YWl0IHByaXNtYS5wb3N0LmZpbmRNYW55KCk7XHJcbiAgICAgICAgICAgICAgICByZXMuc3RhdHVzKDIwMCkuanNvbihwb3N0cyk7XHJcbiAgICAgICAgICAgIH0gY2F0Y2goZSkge1xyXG4gICAgICAgICAgICAgICAgY29uc29sZS5lcnJvcihcIlJlcXVlc3QgZXJyb3JcIiwgZSk7XHJcbiAgICAgICAgICAgICAgICByZXMuc3RhdHVzKDUwMCkuanNvbih7IGVycm9yOiBcIkVycm9yIGZldGNoaW5nIHBvc3RzXCIgfSk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgYnJlYWs7XHJcbiAgICAgICAgZGVmYXVsdDpcclxuICAgICAgICAgICAgcmVzLnNldEhlYWRlcihcIkFsbG93XCIsIFtcIkdFVFwiXSk7XHJcbiAgICAgICAgICAgIHJlcy5zdGF0dXMoNDA1KS5lbmQoYE1ldGhvZCAke21ldGhvZH0gTm90IEFsbG93ZWRgKTtcclxuICAgICAgICAgICAgYnJlYWs7XHJcbiAgICB9XHJcbn0iLCJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJAcHJpc21hL2NsaWVudFwiKTsiXSwibmFtZXMiOlsiUHJpc21hQ2xpZW50IiwicHJpc21hIiwiZ2xvYmFsIiwiYXNzZXRIYW5kbGVyIiwicmVxIiwicmVzIiwibWV0aG9kIiwicG9zdHMiLCJwb3N0IiwiZmluZE1hbnkiLCJzdGF0dXMiLCJqc29uIiwiZSIsImNvbnNvbGUiLCJlcnJvciIsInNldEhlYWRlciIsImVuZCJdLCJzb3VyY2VSb290IjoiIn0=
